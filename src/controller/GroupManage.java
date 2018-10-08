@@ -19,7 +19,7 @@ public class GroupManage {
         allGroups = new Vector<>();
     }
 
-    List<Group> listallgoroups() {
+    List<Group> listallgroups() {
         return allGroups;
     }
 
@@ -33,12 +33,12 @@ public class GroupManage {
         return null;
     }
 
-    void addGroup(Group groupname) {
-        allGroups.add(groupname);
+    void addGroup(Group group) {
+        allGroups.add(group);
     }
 
-    void deleteGroup(Group groupname) {
-        allGroups.remove(groupname);
+    void deleteGroup(Group group) {
+        allGroups.remove(group);
     }
 
     void deleteGroup(String groupname) {
@@ -47,6 +47,10 @@ public class GroupManage {
     }
 
     void updateGroup(Group group) {
-
+        Group g = getGroup(group.getName());
+        if (g != null) {
+            deleteGroup(g);
+            addGroup(g);
+        }
     }
 }

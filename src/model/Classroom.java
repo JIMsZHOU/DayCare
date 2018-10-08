@@ -8,8 +8,12 @@ public class Classroom extends Room{
     public Classroom(String name, String type, int capacity) {
         super(name, type, capacity);
     }
-    public Classroom(String name, String type, int capacity, List<Group> groups) {
-        super(name, type, capacity);
-        this.groups = groups;
+
+    public List<Group> getGroups() {
+        return groups;
+    }
+
+    public void addGroups(Group group) {
+        this.groups.add(group);
     }
 }

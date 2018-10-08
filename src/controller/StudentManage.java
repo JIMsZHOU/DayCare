@@ -14,8 +14,4 @@ public class StudentManage extends AbstractPersonManage{
     private StudentManage() {
 
     }
-
-    Date getVaccine(Student student) {
-        return student.getVaccineDate();
-    }
 }

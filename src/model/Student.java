@@ -7,11 +7,11 @@ public class Student extends Person{
     private Date registerDate;
     private Date vaccineDate;
 
-    public Student(String firstname, String lastname, int age, Parent parent) {
-        this(firstname, lastname, age, null, parent,null, null);
+    public Student(String firstname, String lastname, int age, String gender, Parent parent) {
+        this(firstname, lastname, age, gender, parent,null, null);
     }
 
-    public Student(String firstname, String lastname, int age, String gender, Parent parent, Date registerDate, Date vaccineDate) {
+    private Student(String firstname, String lastname, int age, String gender, Parent parent, Date registerDate, Date vaccineDate) {
         super(firstname, lastname, age, gender, null, null, null);
         this.parent = parent;
         this.registerDate = registerDate;
