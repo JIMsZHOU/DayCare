@@ -17,6 +17,10 @@ import java.util.Date;
 
 public class LoginScreen extends AbstractFrameDate{
 
+    public JFrame getFrame() {
+        return frame;
+    }
+
     private JFrame frame;
     private JTextField yearText;
     private JTextField monthText;
@@ -28,21 +32,6 @@ public class LoginScreen extends AbstractFrameDate{
     private JButton btnumRoom;
     private JButton btreregnum;
     private JButton btvacnum;
-
-    /**
-     * Launch the application.
-     */
-    public static void main(String[] args) {
-        LoginScreen loginScreen =  new LoginScreen();
-        SwingUtilities.invokeLater(new Runnable() {
-            @Override
-            public void run() {
-                loginScreen.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                loginScreen.frame.setBounds(100, 100, 550, 550);
-                loginScreen.frame.setVisible(true);
-            }
-        });
-    }
 
     /**
      * Create the application.
