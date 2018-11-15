@@ -13,8 +13,14 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
+/**
+ * The type List teacher.
+ */
 public class ListTeacher {
 
+    /**
+     * Fresh.
+     */
     void fresh() {
         SwingUtilities.invokeLater(new Runnable() {
             @Override
@@ -46,6 +52,11 @@ public class ListTeacher {
     private List<Teacher> teacherList;
     private LoginScreen loginScreen;
 
+    /**
+     * Gets frame.
+     *
+     * @return the frame
+     */
     public JFrame getFrame() {
         return frame;
     }
@@ -70,6 +81,8 @@ public class ListTeacher {
 
     /**
      * Create the application.
+     *
+     * @param loginScreen the login screen
      */
     public ListTeacher(LoginScreen loginScreen) {
         this.loginScreen = loginScreen;

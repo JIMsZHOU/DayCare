@@ -9,8 +9,16 @@ import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.util.List;
 
+/**
+ * The type Show group.
+ */
 public class ShowGroup {
 
+    /**
+     * Gets frame.
+     *
+     * @return the frame
+     */
     public JFrame getFrame() {
         return frame;
     }
@@ -24,6 +32,9 @@ public class ShowGroup {
 
     /**
      * Create the application.
+     *
+     * @param listGroup the list group
+     * @param group     the group
      */
     public ShowGroup(ListGroup listGroup, Group group) {
         this.group = group;
@@ -40,7 +51,7 @@ public class ShowGroup {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         DefaultTableModel model = new DefaultTableModel();
-        List<Student>studentList =group.getStudents();
+        List<Student> studentList = group.getStudents();
         String[][] info = new String[studentList.size()][6];
         String[] column = {"StudentID", "Firstname", "Lastname", "Age", "Gender"};
         RegisterManage.setTable(studentList, info);
@@ -49,7 +60,6 @@ public class ShowGroup {
         table = new JTable(model);
         frame.getContentPane().add(table, BorderLayout.NORTH);
     }
-
 
 
 }

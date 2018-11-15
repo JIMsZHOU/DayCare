@@ -7,8 +7,16 @@ import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
+/**
+ * The type File import.
+ */
 public class FileImport {
 
+    /**
+     * Gets frame.
+     *
+     * @return the frame
+     */
     public JFrame getFrame() {
         return frame;
     }
@@ -21,6 +29,8 @@ public class FileImport {
 
     /**
      * Create the application.
+     *
+     * @param loginScreen the login screen
      */
     public FileImport(LoginScreen loginScreen) {
         this.loginScreen = loginScreen;

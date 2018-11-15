@@ -10,10 +10,18 @@ import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
+/**
+ * The type Add student.
+ */
 public class AddStudent {
 
     private ListStudent listStudent;
 
+    /**
+     * Gets frame.
+     *
+     * @return the frame
+     */
     public JFrame getFrame() {
         return frame;
     }
@@ -35,6 +43,8 @@ public class AddStudent {
 
     /**
      * Create the application.
+     *
+     * @param listStudent the list student
      */
     public AddStudent(ListStudent listStudent) {
         this.listStudent = listStudent;

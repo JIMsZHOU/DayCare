@@ -7,9 +7,17 @@ import model.space.Group;
 import java.util.List;
 import java.util.Vector;
 
+/**
+ * The type Teacher manage.
+ */
 public class TeacherManage implements ManageAPI {
     private static TeacherManage ourInstance = new TeacherManage();
 
+    /**
+     * Gets instance.
+     *
+     * @return the instance
+     */
     public static synchronized TeacherManage getInstance() {
         return ourInstance;
     }
@@ -17,10 +25,20 @@ public class TeacherManage implements ManageAPI {
     private int size;
     private List<Teacher> teacherList;
 
+    /**
+     * Gets size.
+     *
+     * @return the size
+     */
     public int getSize() {
         return size;
     }
 
+    /**
+     * Sets size.
+     *
+     * @param size the size
+     */
     public void setSize(int size) {
         this.size = size;
     }
@@ -30,16 +48,32 @@ public class TeacherManage implements ManageAPI {
         size = 0;
     }
 
+    /**
+     * Gets teacher list.
+     *
+     * @return the teacher list
+     */
     public List<Teacher> getTeacherList() {
         return teacherList;
     }
 
+    /**
+     * Add teacher.
+     *
+     * @param teacher the teacher
+     */
     public void addTeacher(Teacher teacher) {
         if (getTeacher(teacher.getId()) != null) return;
         this.teacherList.add(teacher);
-        size ++;
+        size++;
     }
 
+    /**
+     * Gets teacher.
+     *
+     * @param id the id
+     * @return the teacher
+     */
     public Teacher getTeacher(int id) {
         for (int i = 0; i < teacherList.size(); i++) {
             if (teacherList.get(i).getId() == id) {
@@ -49,6 +83,11 @@ public class TeacherManage implements ManageAPI {
         return null;
     }
 
+    /**
+     * Delete teacher.
+     *
+     * @param id the id
+     */
     public void deleteTeacher(int id) {
         if (getTeacher(id) == null) return;
         teacherList.remove(getTeacher(id));

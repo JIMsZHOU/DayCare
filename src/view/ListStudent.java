@@ -14,8 +14,14 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
+/**
+ * The type List student.
+ */
 public class ListStudent {
 
+    /**
+     * Fresh.
+     */
     void fresh() {
         SwingUtilities.invokeLater(new Runnable() {
             @Override
@@ -39,6 +45,11 @@ public class ListStudent {
     private List<Student> studentList;
     private LoginScreen loginScreen;
 
+    /**
+     * Gets frame.
+     *
+     * @return the frame
+     */
     public JFrame getFrame() {
         return frame;
     }
@@ -63,6 +74,8 @@ public class ListStudent {
 
     /**
      * Create the application.
+     *
+     * @param loginScreen the login screen
      */
     public ListStudent(LoginScreen loginScreen) {
         this.loginScreen = loginScreen;

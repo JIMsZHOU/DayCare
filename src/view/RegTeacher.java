@@ -8,7 +8,15 @@ import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
+/**
+ * The type Reg teacher.
+ */
 public class RegTeacher {
+    /**
+     * Gets frame.
+     *
+     * @return the frame
+     */
     public JFrame getFrame() {
         return frame;
     }
@@ -18,6 +26,12 @@ public class RegTeacher {
     private ListTeacher listTeacher;
     private Teacher teacher;
 
+    /**
+     * Instantiates a new Reg teacher.
+     *
+     * @param listTeacher the list teacher
+     * @param teacher     the teacher
+     */
     public RegTeacher(ListTeacher listTeacher, Teacher teacher) {
         this.teacher = teacher;
         this.listTeacher = listTeacher;

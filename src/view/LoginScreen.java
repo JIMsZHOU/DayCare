@@ -15,8 +15,16 @@ import java.awt.event.MouseEvent;
 import java.util.Calendar;
 import java.util.Date;
 
-public class LoginScreen extends AbstractFrameDate{
+/**
+ * The type Login screen.
+ */
+public class LoginScreen extends AbstractFrameDate {
 
+    /**
+     * Gets frame.
+     *
+     * @return the frame
+     */
     public JFrame getFrame() {
         return frame;
     }
@@ -41,6 +49,9 @@ public class LoginScreen extends AbstractFrameDate{
         initialize();
     }
 
+    /**
+     * Fresh.
+     */
     void fresh() {
         RegisterManage.doCheck(today);
         yearText.setText(getYear(today));
@@ -74,7 +85,7 @@ public class LoginScreen extends AbstractFrameDate{
 
     private Date changeDate(int year, int month, int day) {
         Calendar calendar = Calendar.getInstance();
-        calendar.set(year, month-1, day);
+        calendar.set(year, month - 1, day);
         return calendar.getTime();
     }
 

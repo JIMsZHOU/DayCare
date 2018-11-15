@@ -6,10 +6,13 @@ import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.util.Random;
 
+/**
+ * The type Name generator.
+ */
 public class NameGenerator {
     /*
-    * Use to generate the initial student file for read
-    * provide a csv file with information of students and their parents.*/
+     * Use to generate the initial student file for read
+     * provide a csv file with information of students and their parents.*/
     private static String names_male = "Dylan Stevens\n" +
             "Archie Rogers\n" +
             "Oscar Atkinson\n" +
@@ -53,6 +56,11 @@ public class NameGenerator {
             "Grace Tyson\n" +
             "Monroe Roy";
 
+    /**
+     * Randomize in place.
+     *
+     * @param arr the arr
+     */
     public static void RandomizeInPlace(String[] arr) {
         Random rgen = new Random();
 
@@ -64,6 +72,11 @@ public class NameGenerator {
         }
     }
 
+    /**
+     * Generate.
+     *
+     * @throws IOException the io exception
+     */
     public static void generate() throws IOException {
         String[] namemale = names_male.split("\n");
         String[] namefemale = names_male.split("\n");
@@ -86,7 +99,7 @@ public class NameGenerator {
             String[] studentname;
             int studentage = (r.nextInt(65)) + 6;
             int parentage = (r.nextInt(20)) + 20;
-            String cellphone = (r.nextInt(900))+100+"-"+(r.nextInt(900))+"-"+(r.nextInt(9000));
+            String cellphone = (r.nextInt(900)) + 100 + "-" + (r.nextInt(900)) + "-" + (r.nextInt(9000));
 
             if (r.nextBoolean()) {
                 studentgender = "male";
@@ -99,18 +112,18 @@ public class NameGenerator {
                 studentname = nameF;
                 parentname = nameM;
             }
-            String content = i+1 + ","
+            String content = i + 1 + ","
                     + studentname[0] + ","
                     + studentname[1] + ","
                     + studentage + ","
                     + studentgender + ","
-                    + i+1 + ","
+                    + i + 1 + ","
                     + parentname[0] + ","
                     + parentname[1] + ","
                     + parentage + ","
                     + parentgender + ","
                     + cellphone + ","
-                    + parentname[0]+parentname[1]+"@hereitis.com" + ","
+                    + parentname[0] + parentname[1] + "@hereitis.com" + ","
                     + (r.nextInt(10000)) + " Mass Ave"
                     + "\n";
             bw.write(content);
@@ -120,6 +133,11 @@ public class NameGenerator {
     }
 
 
+    /**
+     * The entry point of application.
+     *
+     * @param args the input arguments
+     */
     public static void main(String[] args) {
         try {
             NameGenerator.generate();

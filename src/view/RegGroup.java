@@ -8,7 +8,15 @@ import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
+/**
+ * The type Reg group.
+ */
 public class RegGroup {
+    /**
+     * Gets frame.
+     *
+     * @return the frame
+     */
     public JFrame getFrame() {
         return frame;
     }
@@ -18,6 +26,12 @@ public class RegGroup {
     private ListGroup listGroup;
     private Group group;
 
+    /**
+     * Instantiates a new Reg group.
+     *
+     * @param listGroup the list group
+     * @param group     the group
+     */
     public RegGroup(ListGroup listGroup, Group group) {
         this.group = group;
         this.listGroup = listGroup;

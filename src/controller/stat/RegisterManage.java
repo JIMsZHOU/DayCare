@@ -10,7 +10,15 @@ import model.space.Group;
 import java.util.Date;
 import java.util.List;
 
+/**
+ * The type Register manage.
+ */
 public final class RegisterManage implements ManageAPI {
+    /**
+     * Do reg check.
+     *
+     * @param date the date
+     */
     public static void doRegCheck(Date date) {
         List<Group> groupList = GroupManage.getInstance().getGroupList();
         for (Group g : groupList) {
@@ -21,6 +29,11 @@ public final class RegisterManage implements ManageAPI {
         }
     }
 
+    /**
+     * Do vac check.
+     *
+     * @param date the date
+     */
     public static void doVacCheck(Date date) {
         List<Student> studentList = StudentManage.getInstance().getStudentList();
         for (Student s : studentList) {
@@ -28,12 +41,23 @@ public final class RegisterManage implements ManageAPI {
         }
     }
 
+    /**
+     * Do check.
+     *
+     * @param date the date
+     */
     public static void doCheck(Date date) {
         AnnualMange.getInstance().clear();
         doRegCheck(date);
         doVacCheck(date);
     }
 
+    /**
+     * Sets table.
+     *
+     * @param studentList the student list
+     * @param info        the info
+     */
     public static void setTable(List<Student> studentList, String[][] info) {
         for (int i = 0; i < studentList.size(); i++) {
             Student s = studentList.get(i);

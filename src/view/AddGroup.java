@@ -8,8 +8,16 @@ import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
+/**
+ * The type Add group.
+ */
 public class AddGroup {
 
+    /**
+     * Gets frame.
+     *
+     * @return the frame
+     */
     public JFrame getFrame() {
         return frame;
     }
@@ -22,6 +30,8 @@ public class AddGroup {
 
     /**
      * Create the application.
+     *
+     * @param listGroup the list group
      */
     public AddGroup(ListGroup listGroup) {
         this.listGroup = listGroup;
@@ -81,7 +91,7 @@ public class AddGroup {
         panel_2.add(textField_1);
         textField_1.setColumns(10);
 
-        String[] content = {"6-12","13-24","25-35","36-47","48-59","60-~"};
+        String[] content = {"6-12", "13-24", "25-35", "36-47", "48-59", "60-~"};
         comboBox = new JComboBox(content);
         panel_2.add(comboBox);
     }

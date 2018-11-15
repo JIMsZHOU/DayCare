@@ -8,7 +8,15 @@ import java.awt.*;
 import java.util.List;
 import java.util.Vector;
 
+/**
+ * The type List vac.
+ */
 public class ListVac {
+    /**
+     * Gets frame.
+     *
+     * @return the frame
+     */
     public JFrame getFrame() {
         return frame;
     }
@@ -18,6 +26,8 @@ public class ListVac {
 
     /**
      * Create the application.
+     *
+     * @param loginScreen the login screen
      */
     public ListVac(LoginScreen loginScreen) {
         this.loginScreen = loginScreen;

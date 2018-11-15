@@ -12,10 +12,18 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Date;
 
+/**
+ * The type File manage.
+ */
 public final class FileManage implements ManageAPI {
 
     private final static String defaultpath = "./src/infosheet.csv";
 
+    /**
+     * Read csv.
+     *
+     * @param filepath the filepath
+     */
     public static void ReadCSV(String filepath) {
 
         if (filepath == null || filepath.equals("")) filepath = defaultpath;
@@ -63,10 +71,20 @@ public final class FileManage implements ManageAPI {
         }
     }
 
+    /**
+     * Backup.
+     *
+     * @param filepath the filepath
+     */
     public static void Backup(String filepath) {
 
     }
 
+    /**
+     * Restore.
+     *
+     * @param filepath the filepath
+     */
     public static void Restore(String filepath) {
 
     }

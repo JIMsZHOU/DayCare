@@ -5,11 +5,19 @@ import model.person.Teacher;
 import javax.swing.*;
 import java.awt.*;
 
+/**
+ * The type Show teacher.
+ */
 public class ShowTeacher {
 
     private ListTeacher listTeacher;
     private Teacher teacher;
 
+    /**
+     * Gets frame.
+     *
+     * @return the frame
+     */
     public JFrame getFrame() {
         return frame;
     }
@@ -26,6 +34,9 @@ public class ShowTeacher {
 
     /**
      * Create the application.
+     *
+     * @param listTeacher the list teacher
+     * @param teacher     the teacher
      */
     public ShowTeacher(ListTeacher listTeacher, Teacher teacher) {
         this.teacher = teacher;

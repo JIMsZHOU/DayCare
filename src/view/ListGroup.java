@@ -14,8 +14,14 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
+/**
+ * The type List group.
+ */
 public class ListGroup {
 
+    /**
+     * Fresh.
+     */
     void fresh() {
         SwingUtilities.invokeLater(new Runnable() {
             @Override
@@ -71,6 +77,11 @@ public class ListGroup {
     private List<Group> groupList;
     private LoginScreen loginScreen;
 
+    /**
+     * Gets frame.
+     *
+     * @return the frame
+     */
     public JFrame getFrame() {
         return frame;
     }
@@ -95,6 +106,8 @@ public class ListGroup {
 
     /**
      * Create the application.
+     *
+     * @param loginScreen the login screen
      */
     public ListGroup(LoginScreen loginScreen) {
         this.loginScreen = loginScreen;

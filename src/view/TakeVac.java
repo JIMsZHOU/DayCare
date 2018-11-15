@@ -9,10 +9,18 @@ import java.awt.event.MouseEvent;
 import java.util.Calendar;
 import java.util.Date;
 
+/**
+ * The type Take vac.
+ */
 public class TakeVac {
 
     private Student student;
 
+    /**
+     * Gets frame.
+     *
+     * @return the frame
+     */
     public JFrame getFrame() {
         return frame;
     }
@@ -24,12 +32,14 @@ public class TakeVac {
 
     private Date changeDate(int year, int month, int day) {
         Calendar calendar = Calendar.getInstance();
-        calendar.set(year, month-1, day);
+        calendar.set(year, month - 1, day);
         return calendar.getTime();
     }
 
     /**
      * Create the application.
+     *
+     * @param student the student
      */
     public TakeVac(Student student) {
         this.student = student;

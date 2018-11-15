@@ -8,10 +8,18 @@ import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
+/**
+ * The type Add teacher.
+ */
 public class AddTeacher {
 
     private ListTeacher listTeacher;
 
+    /**
+     * Gets frame.
+     *
+     * @return the frame
+     */
     public JFrame getFrame() {
         return frame;
     }
@@ -28,6 +36,8 @@ public class AddTeacher {
 
     /**
      * Create the application.
+     *
+     * @param listTeacher the list teacher
      */
     public AddTeacher(ListTeacher listTeacher) {
         this.listTeacher = listTeacher;

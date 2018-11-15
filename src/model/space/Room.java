@@ -10,26 +10,53 @@ public class Room extends Space {
 
     private List<Group> groups;
 
+    /**
+     * Instantiates a new Room.
+     *
+     * @param id   the id
+     * @param name the name
+     * @param type the type
+     */
     public Room(int id, String name, int type) {
         super(id, name, type, defineCap(type));
         this.groups = new Vector<>();
         this.keepsize();
     }
 
+    /**
+     * Gets groups.
+     *
+     * @return the groups
+     */
     public List<Group> getGroups() {
         return groups;
     }
 
+    /**
+     * Sets groups.
+     *
+     * @param groups the groups
+     */
     public void setGroups(List<Group> groups) {
         this.groups = groups;
     }
 
+    /**
+     * Add group.
+     *
+     * @param group the group
+     */
     public void addGroup(Group group) {
         if (this.getRemain() == 0) return;
         this.groups.add(group);
         this.keepsize();
     }
 
+    /**
+     * Delete group.
+     *
+     * @param group the group
+     */
     public void deleteGroup(Group group) {
         if (group == null) return;
         for (int i = 0; i < this.groups.size(); i++) {
@@ -44,13 +71,20 @@ public class Room extends Space {
 
     private static int defineCap(int type) {
         switch (type) {
-            case 0: return 3; // 6 - 12 month
-            case 1: return 3; // 13 -24 month
-            case 2: return 3; // 25 - 35 month
-            case 3: return 3; // 36 - 47 month
-            case 4: return 2; // 48 - 59 month
-            case 5: return 2; // 60 - more month
-            default: return -1; //return -1 means it was error
+            case 0:
+                return 3; // 6 - 12 month
+            case 1:
+                return 3; // 13 -24 month
+            case 2:
+                return 3; // 25 - 35 month
+            case 3:
+                return 3; // 36 - 47 month
+            case 4:
+                return 2; // 48 - 59 month
+            case 5:
+                return 2; // 60 - more month
+            default:
+                return -1; //return -1 means it was error
         }
     }
 }

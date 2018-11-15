@@ -5,10 +5,18 @@ import model.person.Student;
 import javax.swing.*;
 import java.awt.*;
 
+/**
+ * The type Show student.
+ */
 public class ShowStudent {
 
     private ListStudent listStudent;
 
+    /**
+     * Gets frame.
+     *
+     * @return the frame
+     */
     public JFrame getFrame() {
         return frame;
     }
@@ -30,12 +38,19 @@ public class ShowStudent {
 
     /**
      * Create the application.
+     *
+     * @param listStudent the list student
      */
     public ShowStudent(ListStudent listStudent) {
         this.listStudent = listStudent;
         initialize();
     }
 
+    /**
+     * Sets info.
+     *
+     * @param student the student
+     */
     void setInfo(Student student) {
         SwingUtilities.invokeLater(new Runnable() {
             @Override

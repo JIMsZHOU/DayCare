@@ -6,9 +6,17 @@ import model.space.Room;
 import java.util.List;
 import java.util.Vector;
 
+/**
+ * The type Room manage.
+ */
 public class RoomManage implements ManageAPI {
     private static RoomManage ourInstance = new RoomManage();
 
+    /**
+     * Gets instance.
+     *
+     * @return the instance
+     */
     public static synchronized RoomManage getInstance() {
         return ourInstance;
     }
@@ -16,10 +24,20 @@ public class RoomManage implements ManageAPI {
     private int size;
     private List<Room> roomList;
 
+    /**
+     * Gets size.
+     *
+     * @return the size
+     */
     public int getSize() {
         return size;
     }
 
+    /**
+     * Sets size.
+     *
+     * @param size the size
+     */
     public void setSize(int size) {
         this.size = size;
     }
@@ -29,16 +47,32 @@ public class RoomManage implements ManageAPI {
         size = 0;
     }
 
+    /**
+     * Gets room list.
+     *
+     * @return the room list
+     */
     public List<Room> getRoomList() {
         return roomList;
     }
 
+    /**
+     * Add room.
+     *
+     * @param room the room
+     */
     public void addRoom(Room room) {
         if (getRoom(room.getId()) != null) return;
         this.roomList.add(room);
-        size ++;
+        size++;
     }
 
+    /**
+     * Gets room.
+     *
+     * @param id the id
+     * @return the room
+     */
     public Room getRoom(int id) {
         for (int i = 0; i < roomList.size(); i++) {
             if (roomList.get(i).getId() == id) {
@@ -48,12 +82,22 @@ public class RoomManage implements ManageAPI {
         return null;
     }
 
+    /**
+     * Delete room.
+     *
+     * @param room the room
+     */
     public void deleteRoom(Room room) {
         if (getRoom(room.getId()) == null) return;
         roomList.remove(room);
         size--;
     }
 
+    /**
+     * Delete room.
+     *
+     * @param id the id
+     */
     public void deleteRoom(int id) {
         if (getRoom(id) == null) return;
         roomList.remove(getRoom(id));
